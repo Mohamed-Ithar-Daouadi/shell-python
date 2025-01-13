@@ -5,6 +5,7 @@ def main():
     
     sys.stdout.write("$ ")
     while True:
+        sys.stdout.write("$ ")
         command=input()
         print(f"{command}: command not found\n")
     
