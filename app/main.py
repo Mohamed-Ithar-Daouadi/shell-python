@@ -7,8 +7,8 @@ def main():
     command=input()
     if command == "exit 0":
         exit()
-    else :
-        print(f"{command}: command not found")
+    else if command=="echo":
+        print(f"{command}")
     main()
 
 
