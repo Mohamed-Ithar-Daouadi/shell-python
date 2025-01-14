@@ -9,7 +9,7 @@ def main():
     args = command.split()
     
     match args:
-        case ["type ", command]:
+        case ["type", command]:
             if command in builtins:
                 print(f"{command} is a shell builtin")
             else:
