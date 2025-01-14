@@ -14,7 +14,7 @@ def main():
                 print(f"{command} is a shell builtin")
             else:
                 print(f"{command}: not found")
-        case ["exit"]:
+        case ["exit", "0"]:
             exit()
         case ["echo", *args]:
             print(*args)
