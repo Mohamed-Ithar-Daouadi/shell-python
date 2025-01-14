@@ -5,10 +5,14 @@ def main():
     
     sys.stdout.write("$ ")
     command=input()
-    if command == "exit 0":
-        exit()
-    elif command=="echo":
-        print(f"{command}")
+    match command.split():
+        case ["exit","0"]:
+            exit()
+        case ["echo", *args]:
+            print(*args)
+        case _:
+            print(f"{command}: command not found")
+            
     main()
 
 
