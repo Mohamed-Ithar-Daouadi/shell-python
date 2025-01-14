@@ -7,7 +7,7 @@ def main():
     command=input()
     if command == "exit 0":
         exit()
-    else if command=="echo":
+    elif command=="echo":
         print(f"{command}")
     main()
 
