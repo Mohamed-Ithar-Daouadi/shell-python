@@ -5,15 +5,16 @@ def main():
     
     sys.stdout.write("$ ")
     builtins=["exit", "echo", "type"]
-    command=input()
+    command=input().strip()
+    args = command.split()
     
-    match command.split():
+    match args:
         case ["type ", command]:
             if command in builtins:
                 print(f"{command} is a shell builtin")
             else:
-                print(f"{command} not found")
-        case ["exit","0"]:
+                print(f"{command}: not found")
+        case ["exit"]:
             exit()
         case ["echo", *args]:
             print(*args)
